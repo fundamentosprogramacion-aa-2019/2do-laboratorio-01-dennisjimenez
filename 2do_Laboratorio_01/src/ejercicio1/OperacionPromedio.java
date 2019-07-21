@@ -10,34 +10,38 @@ package ejercicio1;
  * @author Dennis Leo
  */
 public class OperacionPromedio {
-    
-     private Ciudad [] lasCiudades;
+
+    private Ciudad[] lasCiudades;
     private double promedioPoblacion;
+
     //constructor
-    public OperacionPromedio(Ciudad [] Ciudad){
+    public OperacionPromedio(Ciudad[] Ciudad) {
         lasCiudades = Ciudad;
     }
-    
-    public void establecerCiudad(Ciudad [] c){
-        lasCiudades = c;   
+
+    public void establecerCiudad(Ciudad[] c) {
+        lasCiudades = c;
     }
-    public void establerPromedioPoblacion(double promPoblacion){
+
+    public void establerPromedioPoblacion(double promPoblacion) {
         promedioPoblacion = promPoblacion;
     }
-    
-    public double obtenerPromedioPoblacion(){
+
+    public double obtenerPromedioPoblacion() {
         return promedioPoblacion;
     }
-    public Ciudad[] obtenerLasCiudades(){
+
+    public Ciudad[] obtenerLasCiudades() {
         return lasCiudades;
     }
-    public void PromedioPoblacion(){
-        double suma = 0; 
+
+    public void PromedioPoblacion() {
+        double suma = 0;
         for (int i = 0; i < obtenerLasCiudades().length; i++) {
             suma = suma + obtenerLasCiudades()[i].obtenerPoblacion();
-                        
+
         }
         establerPromedioPoblacion(suma / obtenerLasCiudades().length);
     }
-    
+
 }

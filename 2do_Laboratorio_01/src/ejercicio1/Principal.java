@@ -26,17 +26,17 @@ public class Principal {
         Provincia pr4 = new Provincia("Guayas          ", r1);
         Provincia pr5 = new Provincia("Zamora Chinchipe", r3);
 
-        Ciudad c1 = new Ciudad("Zapotillo  ", 16312 , pr1);
-        Ciudad c2 = new Ciudad("Catacocha  ", 5369  , pr1);
-        Ciudad c3 = new Ciudad("Cayambe    ", 39028 , pr2);
-        Ciudad c4 = new Ciudad("Sangolquí  ", 75080 , pr2);
-        Ciudad c5 = new Ciudad("El Guabo   ", 50009 , pr3);
-        Ciudad c6 = new Ciudad("Huaquillas ", 47706 , pr3);
+        Ciudad c1 = new Ciudad("Zapotillo  ", 16312, pr1);
+        Ciudad c2 = new Ciudad("Catacocha  ", 5369, pr1);
+        Ciudad c3 = new Ciudad("Cayambe    ", 39028, pr2);
+        Ciudad c4 = new Ciudad("Sangolquí  ", 75080, pr2);
+        Ciudad c5 = new Ciudad("El Guabo   ", 50009, pr3);
+        Ciudad c6 = new Ciudad("Huaquillas ", 47706, pr3);
         Ciudad c7 = new Ciudad("Durán      ", 235769, pr4);
         Ciudad c8 = new Ciudad("Samborondón", 500000, pr4);
-        Ciudad c9 = new Ciudad("El Pangui  ", 8619  , pr5);
-        Ciudad c10 = new Ciudad("Yantzaza  ", 18500 , pr5);
-        
+        Ciudad c9 = new Ciudad("El Pangui  ", 8619, pr5);
+        Ciudad c10 = new Ciudad("Yantzaza  ", 18500, pr5);
+
         Ciudad[] ciudades = new Ciudad[10];
         ciudades[0] = c1;
         ciudades[1] = c2;
@@ -48,7 +48,7 @@ public class Principal {
         ciudades[7] = c8;
         ciudades[8] = c9;
         ciudades[9] = c10;
-        
+
         System.out.println("CIUDAD\t\t\tPOBLACIÓN\t\tPROVINCIA\t\t\tREGIÓN\n");
         for (int i = 0; i < ciudades.length; i++) {
 
@@ -57,12 +57,12 @@ public class Principal {
                     ciudades[i].obtenerPoblacion(),
                     ciudades[i].obtenerProvincia().obtenerNombre(),
                     ciudades[i].obtenerProvincia().obtenerRegion().obtenerNombre());
-            
+
         }
-        
+
         OperacionPromedio operacion = new OperacionPromedio(ciudades);
         operacion.PromedioPoblacion();
-        
+
         System.out.printf("Promedio de la Poblacion: %s\n",
                 operacion.obtenerPromedioPoblacion());
 
